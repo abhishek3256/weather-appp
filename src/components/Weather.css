@@ -1,0 +1,119 @@
+.weather-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #4B6CB7 0%, #182848 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.search-container input {
+    flex: 1;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.search-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4B6CB7;
+}
+
+.search-icon:hover {
+    transform: scale(1.05);
+    background: #fff;
+}
+
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon svg {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.temperature {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.location {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0.5rem 0 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+}
+
+.detail-item svg {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.detail-item p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.detail-item span {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
