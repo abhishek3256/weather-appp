@@ -28,21 +28,22 @@
     font-size: 1rem;
     background: rgba(255, 255, 255, 0.9);
     color: #333;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .search-container input:focus {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
 }
 
 .search-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     padding: 0.8rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.9);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,21 +51,41 @@
 }
 
 .search-icon:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(5deg);
     background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .weather-icon {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     margin: 1.5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .weather-icon svg {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s ease;
+}
+
+.weather-icon svg:hover {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+    transform: scale(1.05);
 }
 
 .temperature {
@@ -73,6 +94,7 @@
     font-weight: 600;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
 }
 
 .location {
@@ -81,6 +103,18 @@
     margin: 0.5rem 0 1.5rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     opacity: 0.9;
+    animation: fadeIn 0.5s ease-out 0.2s backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .weather-details {
@@ -90,20 +124,32 @@
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.5s ease-out 0.4s backwards;
 }
 
 .detail-item {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
     color: #fff;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-2px);
 }
 
 .detail-item svg {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     color: #fff;
     opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover svg {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .detail-item p {
